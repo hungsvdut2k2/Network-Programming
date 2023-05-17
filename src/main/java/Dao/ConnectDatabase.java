@@ -16,7 +16,7 @@ public class ConnectDatabase {
         }
         return null;
     }
-//    public static void main(String[] args) {
-//        System.out.println(getConnectDatabase());
-//    }
+    public static void main(String[] args) {
+        System.out.println(getConnectDatabase());
+    }
 }
