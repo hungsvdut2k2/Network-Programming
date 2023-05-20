@@ -1,0 +1,71 @@
+package BO;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import Bean.Corpus;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+
+public class CorpusBO {
+    public static String callApiAndGetResponse(String query) throws IOException {
+        // Create the URL object with the API endpoint
+        String[] queryStrings = query.split(" ");
+        String queryString = String.join("%20", queryStrings);
+        String urlString = String.format("http://localhost:8000/search/%s", queryString);
+        URL url = new URL(urlString);
+
+        // Open a connection to the API URL
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+        // Set the request method
+        connection.setRequestMethod("GET");
+
+        // Get the response code
+        int responseCode = connection.getResponseCode();
+
+        // Read the response from the API
+        BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        String line;
+        StringBuilder responseBuilder = new StringBuilder();
+        while ((line = reader.readLine()) != null) {
+            responseBuilder.append(line);
+        }
+
+        reader.close();
+
+        // Close the connection
+        connection.disconnect();
+
+        // Return the API response
+        return responseBuilder.toString();
+    }
+
+    public static ArrayList<Corpus> getValueAndReturn(String query) throws IOException {
+        String responseValue = callApiAndGetResponse(query);
+        ArrayList<Corpus> returnedCorpus = new ArrayList<Corpus>();
+        try {
+            JSONArray jsonArray = new JSONArray(responseValue);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                int id = jsonObject.getInt("id");
+                String title = jsonObject.getString("title");
+                String content = jsonObject.getString("content");
+                Corpus corpus = new Corpus(id, title, content);
+                returnedCorpus.add(corpus);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return returnedCorpus;
+    }
+
+    public static void main(String[] args) throws IOException {
+        ArrayList<Corpus> returnedList = getValueAndReturn("Alpinia Galanga");
+        System.out.println(returnedList.get(0).getTitle());
+    }
+}
