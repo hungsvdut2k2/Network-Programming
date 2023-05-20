@@ -1,6 +1,9 @@
 package Bean;
 
 public class Corpus {
+    public Corpus() {
+    }
+
     public Corpus(int corpusId, String title, String content) {
         this.corpusId = corpusId;
         this.title = title;

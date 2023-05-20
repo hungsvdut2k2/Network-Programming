@@ -6,7 +6,9 @@ import Bean.Corpus;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -64,8 +66,20 @@ public class CorpusBO {
         return returnedCorpus;
     }
 
+    public static Corpus getCorpusById(int id, ArrayList<Corpus> corpusList) throws IOException {
+        for(Corpus corpus: corpusList) {
+            if(corpus.getCorpusId() == id) {
+                return corpus;
+            }
+        }
+        return null;
+    }
+
     public static void main(String[] args) throws IOException {
-        ArrayList<Corpus> returnedList = getValueAndReturn("Alpinia Galanga");
-        System.out.println(returnedList.get(0).getTitle());
+        ArrayList<Corpus> corpusList = getValueAndReturn("Alpinia Galanga");
+        System.out.println(corpusList.get(0).getTitle());
+        Corpus returnCorpus = getCorpusById(506, corpusList);
+
+        System.out.println(returnCorpus.getTitle());
     }
 }

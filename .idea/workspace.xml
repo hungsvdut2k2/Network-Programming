@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995b7480-8615-4814-b472-c898b6b81582" name="Changes" comment="">
+    <list default="true" id="995b7480-8615-4814-b472-c898b6b81582" name="Changes" comment="add CorpusBO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BO/CorpusBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BO/CorpusBO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Bean/Corpus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bean/Corpus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,11 +174,23 @@
       <workItem from="1684294562666" duration="480000" />
       <workItem from="1684295055328" duration="10097000" />
       <workItem from="1684486221375" duration="3752000" />
-      <workItem from="1684566217183" duration="2247000" />
+      <workItem from="1684566217183" duration="4056000" />
     </task>
+    <task id="LOCAL-00001" summary="add CorpusBO">
+      <created>1684568841060</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684568841060</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add CorpusBO" />
+    <option name="LAST_COMMIT_MESSAGE" value="add CorpusBO" />
   </component>
 </project>
