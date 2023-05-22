@@ -9,10 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995b7480-8615-4814-b472-c898b6b81582" name="Changes" comment="finish CorpusBO">
+    <list default="true" id="995b7480-8615-4814-b472-c898b6b81582" name="Changes" comment="finish HistoryBO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BO/HistoryBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BO/HistoryBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Dao/ConnectDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/ConnectDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +177,8 @@
       <workItem from="1684294562666" duration="480000" />
       <workItem from="1684295055328" duration="10097000" />
       <workItem from="1684486221375" duration="3752000" />
-      <workItem from="1684566217183" duration="4807000" />
+      <workItem from="1684566217183" duration="5438000" />
+      <workItem from="1684676854839" duration="5116000" />
     </task>
     <task id="LOCAL-00001" summary="add CorpusBO">
       <created>1684568841060</created>
@@ -190,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684570553247</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finish HistoryBO">
+      <created>1684571285148</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684571285148</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +210,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add CorpusBO" />
     <MESSAGE value="finish CorpusBO" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish CorpusBO" />
+    <MESSAGE value="finish HistoryBO" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish HistoryBO" />
   </component>
 </project>

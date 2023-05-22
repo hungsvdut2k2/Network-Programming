@@ -12,7 +12,7 @@
             <h1>Login</h1>
             <input name="username" placeholder="Username"  required />
             <br />
-            <input type="password" name="password" placeholder="Password" requireds />
+            <input type="password" name="password" placeholder="Password" required />
             <input class="submit" type="submit" value="Login" />
         </form>
     </body>

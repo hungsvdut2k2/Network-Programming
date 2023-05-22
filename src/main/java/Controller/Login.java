@@ -1,6 +1,8 @@
 package Controller;
 
 import BO.UserBO;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,7 +13,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
 
-@WebServlet(name = "loginServlet", value = "/login-servlet")
+@WebServlet(name = "Login", value = "/Login")
 public class Login extends HttpServlet {
     private String message;
     private UserBO userbo = new UserBO();
@@ -20,16 +22,23 @@ public class Login extends HttpServlet {
 
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        if (request.getAttribute("username") != null) {
+            RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+            view.forward(request, response);
+        }else{
+            RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+            dispatcher.forward(request, response);
+        }
     }
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setCharacterEncoding("UTF-8");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         Boolean value = false;
         try {
             value =  userbo.login(username, password);
+            System.out.println(value);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -10,6 +10,7 @@ public class ConnectDatabase {
         String username = "root";
         String password = "password";
         try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection = DriverManager.getConnection(url, username, password);
             return connection;
         }catch (Exception exception){
