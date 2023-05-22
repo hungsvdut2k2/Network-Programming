@@ -15,7 +15,6 @@ import java.sql.SQLException;
 
 @WebServlet(name = "Login", value = "/Login")
 public class Login extends HttpServlet {
-    private String message;
     private UserBO userbo = new UserBO();
 
     public void init() {

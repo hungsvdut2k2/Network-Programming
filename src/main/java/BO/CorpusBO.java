@@ -80,6 +80,6 @@ public class CorpusBO {
         System.out.println(corpusList.get(0).getTitle());
         Corpus returnCorpus = getCorpusById(506, corpusList);
 
-        System.out.println(returnCorpus.getTitle());
+        System.out.println(returnCorpus.getContent());
     }
 }
