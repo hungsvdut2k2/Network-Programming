@@ -11,11 +11,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.sql.SQLException;
 import java.util.Objects;
 
-@WebServlet(name = "Login", value = "/Login")
-public class Login extends HttpServlet {
+@WebServlet(name = "Register", value = "/Register")
+public class Register extends HttpServlet {
     private UserBO userbo = new UserBO();
 
     public void init() {
@@ -27,7 +29,7 @@ public class Login extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
             dispatcher.forward(request, response);
         }else{
-            RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("register.jsp");
             dispatcher.forward(request, response);
         }
     }
@@ -37,9 +39,13 @@ public class Login extends HttpServlet {
         String password = request.getParameter("password");
         Boolean value = false;
         try {
-            value =  userbo.login(username, password);
+            value =  userbo.register(username, password);
             System.out.println(value);
         } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (InvalidKeySpecException e) {
+            throw new RuntimeException(e);
+        } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
         if(value){

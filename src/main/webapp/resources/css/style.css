@@ -62,6 +62,21 @@ form.filter input {
     border-radius: 5px;
     font-size: 12pt;
 }
+form.filter button {
+    background-color: #0090f0;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    border: none;
+    min-width: 20px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 12pt;
+    position: absolute;
+    right: 20px;
+}
 h1 {
     text-align: center;
     padding-bottom: 20px;

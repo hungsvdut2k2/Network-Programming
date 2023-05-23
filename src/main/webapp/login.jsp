@@ -18,6 +18,7 @@
                 <br />
                 <input type="password" name="password" placeholder="Password" required />
                 <input class="submit" type="submit" value="Login" />
+                <a href="${pageContext.request.contextPath}/Register">Don't have an account, register</a>
             </form>
         </div>
     </body>
