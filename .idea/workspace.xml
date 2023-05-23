@@ -9,12 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995b7480-8615-4814-b472-c898b6b81582" name="Changes" comment="add Search (1/2)">
+    <list default="true" id="995b7480-8615-4814-b472-c898b6b81582" name="Changes" comment="add Login/Logout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BO/CorpusBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BO/CorpusBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/SearchId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/SearchId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -180,7 +179,7 @@
       <workItem from="1684486221375" duration="3752000" />
       <workItem from="1684566217183" duration="5438000" />
       <workItem from="1684676854839" duration="21058000" />
-      <workItem from="1684816278091" duration="10714000" />
+      <workItem from="1684816278091" duration="13093000" />
     </task>
     <task id="LOCAL-00001" summary="add CorpusBO">
       <created>1684568841060</created>
@@ -217,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684759002008</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add Login/Logout">
+      <created>1684827845729</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684827845729</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +246,7 @@
     <MESSAGE value="finish HistoryBO" />
     <MESSAGE value="add Login servlet" />
     <MESSAGE value="add Search (1/2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Search (1/2)" />
+    <MESSAGE value="add Login/Logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Login/Logout" />
   </component>
 </project>

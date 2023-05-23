@@ -29,7 +29,7 @@
                         <div class="title">${corpus.getTitle()}</div>
                         <div class="content">${corpus.getContent()}</div>
                         <div class="details">
-                            <button>Read more</button>
+                            <button onclick="location.href='${pageContext.request.contextPath}/Search-Id?id=${corpus.getCorpusId()}'">Read more</button>
                         </div>
                     </div>
                 </c:forEach>
